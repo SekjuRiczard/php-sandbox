@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #3A7CC1;
+    --secondary-color: #EAEFF4; 
+    --text-color: #333;
+    --white: #fff;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* HEADER */
+.headerIndex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header a {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background: #2A6BA0;
+    color: var(--white);
+}
+
+/* FILTRY */
+.sellingFilters {
+    background: var(--white);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sellingFilters h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 🔹 Pierwszy rząd formularza (Marka, Model, Cena) */
+.filtersFirstRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+/* 🔹 Drugi rząd formularza (Reszta pól) */
+.filtersSecondRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid rgb(125, 137, 243);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: var(--white);
+}
+
+button {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2A6BA0;
+}
+
+/* Wyróżnione oferty */
+.highLightedOffers {
+    background: var(--white);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    margin-top: 20px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logoContainer {
+        justify-content: center;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .filtersFirstRow, .filtersSecondRow {
+        flex-direction: column;
+    }
+
+    select, button {
+        width: 100%;
+    }
+}
